@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_PAGE_LINK = (By.CSS_SELECTOR, "[href='/en-gb/basket/']:first-child")
 
 class MainPageLocators():
     pass
@@ -21,3 +22,8 @@ class ProductPageLocators():
     ADDED_ITEM_NAME = (By.CSS_SELECTOR, ".alert-success:first-child .alertinner strong")
     INFO_ABOUT_PRICE_IN_BASKET_MESSAGE = (By.CSS_SELECTOR, ".alert-info .alertinner p:first-child")
     PRICE_IN_BASKET = (By.CSS_SELECTOR, ".alert-info .alertinner p:first-child strong")
+
+class BasketPageLocators():
+    BASKET_PAGE_URL = "https://selenium1py.pythonanywhere.com/en-gb/basket/"
+    BASKET_ITEMS = (By.CLASS_NAME, "basket-items")
+    MESSAGE_ABOUT_EMPTY_BASKET = (By.CSS_SELECTOR, "#content_inner p")
