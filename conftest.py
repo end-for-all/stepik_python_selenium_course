@@ -17,6 +17,3 @@ def browser(request):
     browser.implicitly_wait(3)
     yield browser
     browser.quit()
-
-
-LINK = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
